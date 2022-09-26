@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/destination_home">
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.developper.investproject.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="com.developper.investproject.LoginActivity"
+        android:label="activity_login"
+        tools:layout="@layout/activity_login" />
+    <activity
+        android:id="@+id/homeActivity"
+        android:name="com.developper.investproject.HomeActivity"
+        android:label="activity_home"
+        tools:layout="@layout/activity_home" />
+    <fragment
+        android:id="@+id/destination_home"
+        android:name="com.developper.investproject.ui.Home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/destination_exchange"
+        android:name="com.developper.investproject.ui.Exchange.ExchangeFragment"
+        android:label="fragment_exchange"
+        tools:layout="@layout/fragment_exchange">
+        <action
+            android:id="@+id/action_destination_exchange_to_trade2Fragment"
+            app:destination="@id/trade2Fragment" />
+        <action
+            android:id="@+id/action_destination_exchange_to_trade1Fragment"
+            app:destination="@id/trade1Fragment" />
+        <action
+            android:id="@+id/action_destination_exchange_to_investFragment"
+            app:destination="@id/investFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/destination_profile"
+        android:name="com.developper.investproject.ui.Profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
+        <action
+            android:id="@+id/action_destination_profile_to_profileHelpFragment"
+            app:destination="@id/profileHelpFragment" />
+        <action
+            android:id="@+id/action_destination_profile_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.developper.investproject.ui.EditProfile.EditProfileFragment"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile" />
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.developper.investproject.ui.History.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" >
+        <action
+            android:id="@+id/action_historyFragment_to_historyFragment2"
+            app:destination="@id/historyFragment2" />
+        <action
+            android:id="@+id/action_historyFragment_to_historyFragment3"
+            app:destination="@id/historyFragment3" />
+        <action
+            android:id="@+id/action_historyFragment_to_historyFragment4"
+            app:destination="@id/historyFragment4" />
+    </fragment>
+    <dialog
+        android:id="@+id/publishedFragment"
+        android:name="com.developper.investproject.ui.PublishedFragment"
+        android:label="fragment_published"
+        tools:layout="@layout/fragment_published" >
+        <action
+            android:id="@+id/action_publishedFragment_to_destination_exchange"
+            app:destination="@id/destination_exchange" />
+    </dialog>
+    <fragment
+        android:id="@+id/trade1Fragment"
+        android:name="com.developper.investproject.ui.helper.Trade1Fragment"
+        android:label="fragment_trade1"
+        tools:layout="@layout/fragment_trade1" >
+        <action
+            android:id="@+id/action_trade1Fragment_to_destination_exchange"
+            app:destination="@id/destination_exchange" />
+        <action
+            android:id="@+id/action_trade1Fragment_to_paymentsFragment"
+            app:destination="@id/paymentsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/trade2Fragment"
+        android:name="com.developper.investproject.ui.helper.Trade2Fragment"
+        android:label="fragment_trade2"
+        tools:layout="@layout/fragment_trade2" >
+        <action
+            android:id="@+id/action_trade2Fragment_to_destination_exchange"
+            app:destination="@id/destination_exchange" />
+        <action
+            android:id="@+id/action_trade2Fragment_to_paymentsFragment"
+            app:destination="@id/paymentsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/investFragment"
+        android:name="com.developper.investproject.ui.helper.InvestFragment"
+        android:label="fragment_invest"
+        tools:layout="@layout/fragment_invest" >
+        <action
+            android:id="@+id/action_investFragment_to_unPublishedFragment"
+            app:destination="@id/unPublishedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileHelpFragment"
+        android:name="com.developper.investproject.ui.Profile.ProfileHelpFragment"
+        android:label="fragment_profile_help"
+        tools:layout="@layout/fragment_profile_help" />
+    <activity
+        android:id="@+id/signInActivity"
+        android:name="com.developper.investproject.SignInActivity"
+        android:label="activity_sign_in"
+        tools:layout="@layout/activity_sign_in" />
+    <dialog
+        android:id="@+id/unPublishedFragment"
+        android:name="com.developper.investproject.ui.UnPublishedFragment"
+        android:label="fragment_un_published"
+        tools:layout="@layout/fragment_un_published" >
+        <action
+            android:id="@+id/action_unPublishedFragment_to_destination_exchange"
+            app:destination="@id/destination_exchange" />
+    </dialog>
+    <fragment
+        android:id="@+id/paymentsFragment"
+        android:name="com.developper.investproject.ui.PaymentsFragment"
+        android:label="fragment_payments"
+        tools:layout="@layout/fragment_payments" >
+        <action
+            android:id="@+id/action_paymentsFragment_to_publishedFragment"
+            app:destination="@id/publishedFragment" />
+        <argument
+            android:name="trade2"
+            app:argType="com.developper.investproject.room_Model.Trade.Note_trade"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+    <fragment
+        android:id="@+id/historyFragment2"
+        android:name="com.developper.investproject.ui.History.HistoryFragment2"
+        android:label="fragment_history2"
+        tools:layout="@layout/fragment_history2" >
+        <action
+            android:id="@+id/action_historyFragment2_to_historyFragment"
+            app:destination="@id/historyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/historyFragment3"
+        android:name="com.developper.investproject.ui.History.HistoryFragment3"
+        android:label="fragment_history3"
+        tools:layout="@layout/fragment_history3" >
+        <action
+            android:id="@+id/action_historyFragment3_to_historyFragment"
+            app:destination="@id/historyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/historyFragment4"
+        android:name="com.developper.investproject.ui.History.HistoryFragment4"
+        android:label="fragment_history4"
+        tools:layout="@layout/fragment_history4" >
+        <action
+            android:id="@+id/action_historyFragment4_to_historyFragment"
+            app:destination="@id/historyFragment" />
+    </fragment>
+</navigation>

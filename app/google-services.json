@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "878675706693",
+    "project_id": "invest-project-ba591",
+    "storage_bucket": "invest-project-ba591.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:878675706693:android:0fe1b44ee6f9e48f75742c",
+        "android_client_info": {
+          "package_name": "com.developper.investproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "878675706693-gbf57mt6uc6r5rbe9c0pb6ddg3um4610.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAc0hv1HrRJnuNzBf4I2qDdIhYZvQ8OdpI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "878675706693-gbf57mt6uc6r5rbe9c0pb6ddg3um4610.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

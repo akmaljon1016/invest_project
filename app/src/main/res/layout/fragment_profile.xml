@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Profile.ProfileFragment">
+
+    <ImageView
+        android:id="@+id/profile"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/man"
+        app:layout_constraintBottom_toTopOf="@id/btnAddVilla"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtProfile" />
+
+    <ImageButton
+        android:id="@+id/btnSettings"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/yumaloq"
+        android:src="@drawable/ic_baseline_history_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Profile"
+        android:textColor="#252B5C"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/btnSettings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btnSettings" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAddVilla"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="#E8E8E8"
+        android:text="Изменить профиль"
+        android:textAllCaps="false"
+        android:textColor="@color/textColor"
+        android:textSize="18sp"
+        app:cornerRadius="25dp"
+        app:icon="@drawable/ic_baseline_edit_24"
+        app:iconGravity="textStart"
+        app:iconTint="@color/textColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile" />
+
+   <LinearLayout
+       app:layout_constraintTop_toBottomOf="@id/btnAddVilla"
+       android:layout_width="match_parent"
+       android:padding="5dp"
+       android:layout_height="wrap_content">
+
+       <com.google.android.material.button.MaterialButton
+           android:id="@+id/btnTelegram"
+           android:layout_width="0dp"
+           android:layout_height="70dp"
+           android:layout_marginStart="24dp"
+           android:layout_marginTop="15dp"
+           android:layout_weight="1"
+           android:layout_marginEnd="24dp"
+           android:backgroundTint="@color/telegram_color"
+           android:text="TELEGRAM"
+           android:textAllCaps="false"
+           android:textSize="18sp"
+           app:cornerRadius="25dp"
+           app:iconGravity="textStart"
+           app:layout_constraintTop_toBottomOf="@id/btnAddVilla" />
+
+       <com.google.android.material.button.MaterialButton
+           android:id="@+id/btn_help_user"
+           android:layout_width="0dp"
+           android:layout_height="70dp"
+           android:layout_marginStart="24dp"
+           android:layout_marginTop="15dp"
+           android:layout_marginEnd="24dp"
+           android:text="Помощь"
+           android:textAllCaps="false"
+           android:backgroundTint="#E8E8E8"
+           android:layout_weight="1"
+           android:textColor="@color/black"
+           android:textSize="18sp"
+           app:cornerRadius="25dp"
+           app:iconGravity="textStart"
+           app:layout_constraintTop_toBottomOf="@id/btnTelegram" />
+
+   </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

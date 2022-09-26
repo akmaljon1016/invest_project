@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name"><b>NB7</b> <i>offical</i></string>
+    <string name="signing">Sign up</string>
+    <string name="hey">Hello</string>
+    <string name="expplopping">👋</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="your">Your listing is now</string>
+    <string name="published"><b>published 🎉</b></string>
+    <string name="aw">Aw snap, Something</string>
+    <string name="errorhas"><b>error</b> happened</string>
+
+    <string name="succes">Переходите в <b>\'Профиль\'</b> и нажмите историй сделаете скрин и отправляете к нам мы проверяем пополнений</string>
+</resources>
